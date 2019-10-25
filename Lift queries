@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+
+   long long int t,top=7,bottom=0,a;
+    scanf("%lld",&t);
+    while(t--)
+    {
+        scanf("%d",&a);
+        if(a-bottom<top-a)
+            {
+            printf("A\n");
+            bottom=a;
+            }
+        else if(a-bottom==top-a)
+        {
+            if(bottom<a){
+                printf("A\n");
+                bottom=a;
+            }
+            if(top<a)
+            {
+                printf("B\n");
+                top=a;
+
+        }
+
+    }
+    else
+    {
+        printf("B\n");
+        top=a;
+    }
+    }
+    return 0;
+}
